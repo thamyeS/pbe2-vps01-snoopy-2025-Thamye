@@ -13,6 +13,7 @@ Desenvolver as funcionalidades conforme requisitos
     - [RF001.3] A rota **readOne** do cliente deve mostrar os dados de um cliente específico, seus telefones e seus pedidos.
 - [RF002] O sistema deve permitir o CRUD de pedidos.
     - [RF002.1] O sistema deve associar o pedido a um cliente.
+    - [RF002.2] Ao cadastrar um novo pedido **create** no controller sistema calcular o subTotal multiplicando o preco pela quantidade.
 
 ### Casos de teste (Insomnia)
 - [CT001] Deve ser cadastrado pelo menos 5 clientes.
