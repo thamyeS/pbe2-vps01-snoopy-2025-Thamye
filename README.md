@@ -18,7 +18,7 @@ Desenvolver as funcionalidades conforme requisitos
 ### Casos de teste (Insomnia)
 - [CT001] Deve ser cadastrado pelo menos 5 clientes.
 - [CT002] Deve ser cadastrado ao menos 1 telefone para cada cliente.
-    - [CT002.1] Pelo menos dois clientes deve ter dois ou mais telefones cadastrados.
+    - [CT002.1] Pelo menos dois clientes devem ter dois ou mais telefones cadastrados.
 - [CT003] Cadastre, altere e exclua um cliente.
 - [CT004] Cadastre um pedido para cada cliente.
     - [CT004.1] Pelo menos um cliente deve ter dois ou mais pedidos cadastrados.
