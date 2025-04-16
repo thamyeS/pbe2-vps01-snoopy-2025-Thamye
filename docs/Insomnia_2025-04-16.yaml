@@ -2,44 +2,50 @@ type: collection.insomnia.rest/5.0
 name: Scratch Pad
 meta:
   id: wrk_scratchpad
-  created: 1742294727688
-  modified: 1742294727688
+  created: 1741696083795
+  modified: 1741696083795
 collection:
+  - name: PetShop
+    meta:
+      id: fld_c12f8e46810e46d297cbd0cf63b82aa9
+      created: 1742910566723
+      modified: 1742926833120
+      sortKey: -1742910566723
+    children:
+      - name: Cliente
+        meta:
+          id: fld_c6a82d7ad66c4a9780761ea736d2425d
+          created: 1742910610229
+          modified: 1742910610229
+          sortKey: -1742910610229
+      - name: Pedido
+        meta:
+          id: fld_95cf0b7e094c441cbf31e92aed9bd083
+          created: 1742926839790
+          modified: 1742927314242
+          sortKey: -1742926839790
+      - name: Telefone
+        meta:
+          id: fld_361713eae78043e2b969e7ade65e2833
+          created: 1742927243677
+          modified: 1742927243677
+          sortKey: -1742927243677
   - name: Pizzaria
     meta:
-      id: fld_c9b49bf658f34c3193ff6131e680a7cc
+      id: fld_27f92bd1be8f4e3a8aece59723d24b4d
       created: 1744225802550
       modified: 1744225802550
       sortKey: -1744225802550
-    children:
-      - name: clientes
-        meta:
-          id: fld_b2c9b176d4d3414fb81e40acb3092b68
-          created: 1744225822436
-          modified: 1744225822436
-          sortKey: -1744225822436
-      - name: pedidos
-        meta:
-          id: fld_7208de5a9f434fa99dedcefe384bd763
-          created: 1744225828064
-          modified: 1744225852841
-          sortKey: -1744225828064
-      - name: pizzas
-        meta:
-          id: fld_0dd0004c493f41a6be2437520739e597
-          created: 1744225839962
-          modified: 1744225839962
-          sortKey: -1744225839962
   - name: Pet Shop Snoopy
     meta:
-      id: fld_13d60b952a4a4989b3254755e10ff2be
+      id: fld_1b9d5793acdd4971a61426968e8ec7d0
       created: 1744743274120
       modified: 1744743274120
       sortKey: -1744743274120
     children:
       - name: Cliente
         meta:
-          id: fld_1b2ea92fa22042a7a5b1bcadb3129f60
+          id: fld_e23d8aad3a834182ba2f292ad245d8dd
           created: 1744743323447
           modified: 1744747759197
           sortKey: -1744747759125
@@ -47,7 +53,7 @@ collection:
           - url: http://localhost:3001/clientes/6
             name: Delete
             meta:
-              id: req_c7c1d0e1781d4d0bb82a255e2f5da385
+              id: req_dba97bd2e31942e7bc9c2301dccaeb60
               created: 1744743323452
               modified: 1744746735655
               isPrivate: false
@@ -64,12 +70,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: http://localhost:3001/clientes/2
+          - url: http://localhost:3001/clientes/1
             name: Update
             meta:
-              id: req_13419c8fe9354892bdc911d365283543
+              id: req_8b069a1e0c144bfda9e56eed7a56c1c7
               created: 1744743323454
-              modified: 1744747765547
+              modified: 1744802056787
               isPrivate: false
               sortKey: -1744225846099.5
             method: PATCH
@@ -78,7 +84,7 @@ collection:
               text: |
                 {
                   "cpf": "76487746374",
-                  "nome": "Daniel"
+                  "nome": "Danilo"
 
                 }
             headers:
@@ -97,9 +103,9 @@ collection:
           - url: http://localhost:3001/clientes
             name: Create
             meta:
-              id: req_c043a2dd3efe4c48817d047e8286ff01
+              id: req_25b74813d8a24276b5e91ebd9378cf92
               created: 1744743323457
-              modified: 1744744070100
+              modified: 1744801999050
               isPrivate: false
               sortKey: -1744225846973
             method: POST
@@ -107,8 +113,8 @@ collection:
               mimeType: application/json
               text: |
                 {
-                  "cpf": "76487758374",
-                  "nome": "Daniel"
+                  "cpf": "4444545",
+                  "nome": "Lais"
 
                 }
             headers:
@@ -127,13 +133,17 @@ collection:
           - url: http://localhost:3001/clientes/1
             name: ReadOne
             meta:
-              id: req_32cacd95a76c4448a812a26ca03de871
+              id: req_e128a365f192478eb21f83d575fe3a88
               created: 1744743323459
-              modified: 1744744340641
+              modified: 1744802314632
               isPrivate: false
               sortKey: -1744225847493
             method: GET
+            body:
+              mimeType: application/json
             headers:
+              - name: Content-Type
+                value: application/json
               - name: User-Agent
                 value: insomnia/11.0.2
             settings:
@@ -147,7 +157,7 @@ collection:
           - url: http://localhost:3001/clientes
             name: Read
             meta:
-              id: req_11e7ca91d39044c1a65335efd9a1498d
+              id: req_47b7dd85d714433a8cd1428c2f4fddb5
               created: 1744743323461
               modified: 1744744085431
               isPrivate: false
@@ -170,17 +180,17 @@ collection:
               rebuildPath: true
       - name: Telefone
         meta:
-          id: fld_ec6a6c489ac848449708952c5454ff6e
+          id: fld_1bce319851cb41129c1b06142f508973
           created: 1744743340786
           modified: 1744747762332
           sortKey: -1744747759225
         children:
-          - url: http://localhost:3001/telefones/
+          - url: http://localhost:3001/telefones/5
             name: Delete
             meta:
-              id: req_8b75817dc38847389d827f5c5c0561fb
+              id: req_6e8b9749a3024c3db3f34d212d739888
               created: 1744743340789
-              modified: 1744746255513
+              modified: 1744803491403
               isPrivate: false
               sortKey: -1744225845226
             method: DELETE
@@ -198,18 +208,17 @@ collection:
           - url: http://localhost:3001/telefones/4
             name: Update
             meta:
-              id: req_e2880ace66d84ac594cee843bd61cefe
+              id: req_2536cdab3bbd4f63a53f4dca02ebed9c
               created: 1744743340791
-              modified: 1744747674915
+              modified: 1744802952314
               isPrivate: false
               sortKey: -1744225846555
-            method: PUT
+            method: PATCH
             body:
               mimeType: application/json
               text: |-
                 {
-                  "numero": "19 645655",
-                  "tipo":"celular"
+                  "numero": "19 5355654"
                 }
             headers:
               - name: Content-Type
@@ -227,9 +236,9 @@ collection:
           - url: http://localhost:3001/telefones
             name: Create
             meta:
-              id: req_d00512845ba3487fb648c20d4170c187
+              id: req_b2da09d823e1405bab4eb16124951850
               created: 1744743340794
-              modified: 1744747615150
+              modified: 1744804113584
               isPrivate: false
               sortKey: -1744225846973
             method: POST
@@ -237,10 +246,10 @@ collection:
               mimeType: application/json
               text: |-
                 {
-                	"clienteId":5,
-                  "numero": "19 5656546",
-                  "tipo":"celular"
-                }
+                		"clienteId": 1,
+                		"numero": "11 54545454554",
+                		"tipo": "comercial"
+                	}
             headers:
               - name: Content-Type
                 value: application/json
@@ -254,12 +263,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: http://localhost:3001/telefones/1
+          - url: http://localhost:3001/telefones/2
             name: ReadOne
             meta:
-              id: req_ac7e1c17007e44a09b157afa4d057b66
+              id: req_bc7be117045e480da8d0b467dcf2e886
               created: 1744743340796
-              modified: 1744746210043
+              modified: 1744802704969
               isPrivate: false
               sortKey: -1744225847493
             method: GET
@@ -277,9 +286,9 @@ collection:
           - url: http://localhost:3001/telefones
             name: Read
             meta:
-              id: req_41108dbf092c4719b2a83be7312aa7c1
+              id: req_7f98de48f26540e1ad355a6884f39421
               created: 1744743340799
-              modified: 1744746110358
+              modified: 1744802502356
               isPrivate: false
               sortKey: -1744225848169
             method: GET
@@ -300,17 +309,17 @@ collection:
               rebuildPath: true
       - name: Pedidos
         meta:
-          id: fld_619865eb4f984c3c8cc7747e247c2de4
+          id: fld_315ba7b93417464a80c8fee548fdbb25
           created: 1744743362314
           modified: 1744747767599
           sortKey: -1744747759325
         children:
-          - url: http://localhost:5000/clientes/6
+          - url: http://localhost:3001/pedidos/7
             name: Delete
             meta:
-              id: req_d12b1747dbc74f99b14dc69fca16c2d1
+              id: req_bfe63617c8604642ae78b1a259133f3d
               created: 1744743362318
-              modified: 1744743362318
+              modified: 1744808851232
               isPrivate: false
               sortKey: -1744225845226
             method: DELETE
@@ -325,25 +334,23 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: http://localhost:5000/clientes/1
+          - url: http://localhost:3001/pedidos/6
             name: Update
             meta:
-              id: req_9fcb22a946b549b0af886520f4325f50
+              id: req_459ea790e5d544a5a379448bf505e8aa
               created: 1744743362321
-              modified: 1744743362321
+              modified: 1744808814812
               isPrivate: false
               sortKey: -1744225846555
-            method: PUT
+            method: PATCH
             body:
               mimeType: application/json
               text: |
                 {
-                  "nome": "julia",
-                  "telefone": "193345543",
-                  "logradouro": "Rua das Pingas",
-                  "numero": "345",
-                  "bairro": "Nova ",
-                  "referencia": "Perto do São José"
+                  "clienteId":5,
+                  "produto":"roupinha",
+                  "qtd":2,
+                  "preco":45.00
                 }
             headers:
               - name: Content-Type
@@ -358,26 +365,23 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: http://localhost:5000/clientes
+          - url: http://localhost:3001/pedidos
             name: Create
             meta:
-              id: req_e1a57de3a30b42bc82b51c06dc54bb77
+              id: req_1ab7f8e45c2d49479aafc13780926875
               created: 1744743362325
-              modified: 1744743362325
+              modified: 1744808733422
               isPrivate: false
               sortKey: -1744225846973
             method: POST
             body:
               mimeType: application/json
-              text: |
+              text: |-
                 {
-                  "cliente_id": "6",
-                  "nome": "Thamye",
-                  "telefone": "193345543",
-                  "logradouro": "Rua das Pingas",
-                  "numero": "345",
-                  "bairro": "Nova ",
-                  "referencia": "Perto do São José"
+                  "clienteId":5,
+                  "produto":"pastel",
+                  "qtd":4,
+                  "preco":4.00
                 }
             headers:
               - name: Content-Type
@@ -392,12 +396,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: http://localhost:5000/clientes/
+          - url: http://localhost:3001/pedidos/1
             name: ReadOne
             meta:
-              id: req_ee42faf8c1484e8f83f42b59c428ca52
+              id: req_382eca5cee1d48d1a6175f459dc5afd1
               created: 1744743362329
-              modified: 1744743362329
+              modified: 1744804674530
               isPrivate: false
               sortKey: -1744225847493
             method: GET
@@ -412,12 +416,12 @@ collection:
                 send: true
                 store: true
               rebuildPath: true
-          - url: http://localhost:5000/clientes
+          - url: http://localhost:3001/pedidos
             name: Read
             meta:
-              id: req_e470d82209154638b817c7db82f8b0a0
+              id: req_43d0fe7290ea479a8c4651b35fc99255
               created: 1744743362332
-              modified: 1744743362332
+              modified: 1744804587808
               isPrivate: false
               sortKey: -1744225848169
             method: GET
@@ -440,12 +444,12 @@ cookieJar:
   name: Default Jar
   meta:
     id: jar_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1742294736181
-    modified: 1742294736181
+    created: 1741785120054
+    modified: 1741785120054
 environments:
   name: Base Environment
   meta:
     id: env_99d30891da4bdcebc63947a8fc17f076de878684
-    created: 1742294736174
-    modified: 1742294736174
+    created: 1741785119979
+    modified: 1741785119979
     isPrivate: false
