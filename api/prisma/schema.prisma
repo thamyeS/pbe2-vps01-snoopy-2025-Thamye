@@ -20,7 +20,7 @@ model Telefone{
   clienteId Int
   numero String @db.VarChar(20)
   tipo String @db.VarChar(20)
-  cliente Cliente @relation(fields: [id], references: [id])
+  cliente Cliente @relation(fields: [clienteId], references: [id])
 }
 
 model Pedido{
@@ -31,5 +31,5 @@ model Pedido{
   qtd Int
   preco Decimal @db.Decimal(10,2)
   subTotal Decimal? @db.Decimal(10,2)
-  cliente Cliente @relation(fields: [id], references: [id])
+  cliente Cliente @relation(fields: [clienteId], references: [id])
 }

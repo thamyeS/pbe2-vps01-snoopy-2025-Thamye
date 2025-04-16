@@ -18,16 +18,21 @@ const read = async (req, res) => {
     res.json(pedidos);
 }
 
-const readOne= async (req, res) => {
-    const pedido = await prisma.pedido.findMany();
-    where: {
-        id: Number(req.params.id)
+const readOne = async (req, res) => {
+    try {
+        const pedido = await prisma.pedido.findUnique({
+            select: {
+                telefones: true, 
+                clientes: true,  
+            },
+            where: {
+                id: Number(req.params.id)
+            }
+        });
+        return res.json(pedido);
+    } catch (error) {
+        return res.status(400).json({ error: error.message });
     }
-    include: {
-        cliente: true
-        pedido: true
-}
-res.json(pedido);
 }
 
 

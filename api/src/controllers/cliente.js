@@ -21,11 +21,11 @@ const readOne = async (req, res) => {
     try {
         const cliente = await prisma.cliente.findUnique({
             select: {
-                telefone: true,
-                pedido: true,
+                telefones: true, 
+                pedidos: true,  
             },
             where: {
-                id: req.params.id
+                id: Number(req.params.id)
             }
         });
         return res.json(cliente);

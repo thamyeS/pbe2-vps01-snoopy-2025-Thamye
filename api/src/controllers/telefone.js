@@ -17,18 +17,21 @@ const read = async (req, res) => {
     res.json(telefones);
 }
 
-const readOne= async (req, res) => {
-    const telefone = await prisma.telefone.findMany();
-    where: {
-        id: Number(req.params.id)
+const readOne = async (req, res) => {
+    try {
+        const telefone = await prisma.telefone.findUnique({
+            where: {
+                id: Number(req.params.id) // Converte o ID para número
+            },
+            include: {
+                cliente: true // Inclui os dados do cliente relacionado
+            }
+        });
+        res.json(telefone);
+    } catch (e) {
+        res.status(400).json({ error: e.message }).end();
     }
-    include: {
-        cliente: true
-        pedido: true
-}
-res.json(telefone);
-}
-
+};
 
 const update = async (req, res) => {
     try {
