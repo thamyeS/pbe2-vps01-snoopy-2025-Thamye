@@ -2,7 +2,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
-    req.body.subtotal = req.body.produto.preco * req.body.quantidade;
+    req.body.subTotal = req.body.preco * req.body.qtd;
     try {
         const pedido = await prisma.pedido.create({
             data: req.body
@@ -22,8 +22,7 @@ const readOne = async (req, res) => {
     try {
         const pedido = await prisma.pedido.findUnique({
             select: {
-                telefones: true, 
-                clientes: true,  
+                cliente: true, 
             },
             where: {
                 id: Number(req.params.id)
